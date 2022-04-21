@@ -1,3 +1,23 @@
 /* =============
     Footer
 ============= */
+footer{
+
+    >div{
+
+        #locations{
+            ul{
+
+                li{
+
+                    section{
+                        display: grid;
+                        grid-template-columns: 10% auto;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
