@@ -369,6 +369,15 @@ ul li {
   grid-area: global-grid;
 }
 
+.show-for-desktop {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .show-for-desktop {
+    display: block;
+  }
+}
+
 /* =============
     Typography
 ============= */
