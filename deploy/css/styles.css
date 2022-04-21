@@ -352,6 +352,23 @@ template {
 /* =============
     Base
 ============= */
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  list-style: none;
+}
+
+.global-css-grid {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". global-grid .";
+}
+.global-css-grid > div {
+  grid-area: global-grid;
+}
+
 /* =============
     Typography
 ============= */
@@ -386,14 +403,34 @@ textarea {
     Footer
 ============= */
 /* =============
-    Gallery
-============= */
-/* =============
     Hero
 ============= */
+#hero #hero-img {
+  width: 100%;
+}
+
+.hero-sub-content > div {
+  display: grid;
+  grid-template-columns: 75% auto;
+}
+.hero-sub-content > div aside img {
+  width: 100%;
+}
+
+/* =============
+    Gallery
+============= */
+#gallery ul li img {
+  width: 100%;
+}
+
 /* =============
     New
 ============= */
+#new ul li img {
+  width: 100%;
+}
+
 /* =============
     Search
 ============= */
