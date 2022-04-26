@@ -5,7 +5,29 @@ footer{
 
     >div{
 
+        display: grid;
+        gap: 16px;
+
+        @include md{
+            grid-template-columns: 50% auto;
+
+            grid-template-areas: 
+            "locations newsletter"
+            ". social";
+        }
+
+        @include lg{
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: 
+            "locations newsletter social";
+        }
+
         #locations{
+
+            @include md{
+                grid-area: locations;
+            }
+
             ul{
 
                 li{
@@ -15,6 +37,18 @@ footer{
                         grid-template-columns: 10% auto;
                     }
                 }
+            }
+        }
+
+        #newsletter{
+            @include md{
+                grid-area: newsletter;
+            }
+        }
+
+        #social{
+            @include md{
+                grid-area: social;
             }
         }
 

@@ -7,23 +7,63 @@
     #hero-img{
         width: 100%;
     }
-}
 
-.hero-sub-content{
-        >div{
+    article{
+
+        @include md{
             display: grid;
-            grid-template-columns: 75% auto;
+            grid-template-columns: 50% auto;
+        }
 
-            section{
+        #hero-checklist{
 
+            @include xxl{
+                grid-template-columns: auto 720px 16px;
 
-            }
-
-            aside{
-                img{
-                    width: 100%;
-                }
             }
         }
 
+        #hero-location{
+           
+
+            @include xxl{
+                grid-template-columns: 16px 720px auto;
+            }
+        }
+    }
 }
+
+
+#hero-sub-container{
+
+    display: grid;
+    gap: 24px;
+
+    @include md{
+        grid-template-columns: 50% auto;
+    }
+
+    @include xxl{
+        grid-template-columns: auto 720px 720px auto;
+        grid-template-areas: ". planning tickets .";
+    }
+
+    #planning{
+        @include xxl{
+            grid-area: planning;
+        }
+    }
+
+    #tickets{
+        @include xxl{
+            grid-area: tickets;
+        }
+    }
+
+    .hero-sub-content{
+        background-color: #ef8001;
+    }
+}
+
+
+
