@@ -41,6 +41,14 @@
             @include xxl {
                 grid-template-columns: 16px 720px auto;
             }
+
+            p{
+                // color: var(--black);
+                span{
+                    font-weight: 700;
+                    // font-size: rem-calc(50);
+                }
+            }
         }
     }
 }

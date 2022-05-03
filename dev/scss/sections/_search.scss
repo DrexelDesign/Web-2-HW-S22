@@ -21,22 +21,6 @@
 
             }
 
-
-            ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-                color: var(--dark-blue);
-                opacity: 1; /* Firefox */
-              }
-              
-              :-ms-input-placeholder { /* Internet Explorer 10-11 */
-                color: var(--dark-blue);
-              }
-              
-              ::-ms-input-placeholder { /* Microsoft Edge */
-                color: var(--dark-blue);
-              }
-
-
-
             button{
                 background-color: var(--light-orange);
                 border-radius: 3.5px;
