@@ -3,6 +3,22 @@
 ============= */
 footer{
 
+    background-color: var(--dark-blue);
+    color: var(--white);
+    padding: 16px 0;
+
+    @include md{
+        padding: 24px 0;
+    }
+
+    @include lg{
+        padding: 48px 0;
+    }
+
+    @include xl{
+        padding: 64px 0;
+    }
+
     >div{
 
         display: grid;
@@ -22,6 +38,12 @@ footer{
             "locations newsletter social";
         }
 
+        h1{
+            font-size: rem-calc(20);
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
         #locations{
 
             @include md{
@@ -31,6 +53,20 @@ footer{
             ul{
 
                 li{
+                    margin-top: 24px;
+
+                    h2{
+                        color: var(--aqua-blue);
+                        font-weight: 600;
+                        font-size: rem-calc(16);
+                        margin-bottom: 16px;
+                    }
+
+                    address{
+                        color: var(--aqua-blue);
+                        font-size: rem-calc(12);
+                        font-style: normal;
+                    }
 
                     section{
                         display: grid;
@@ -44,11 +80,59 @@ footer{
             @include md{
                 grid-area: newsletter;
             }
+
+            form{
+                input{
+                    border: none;
+                    background-color: var(--light-blue);
+                    width: 100%;
+                    box-sizing: border-box;
+                    padding: 16px 8px;
+                    border-radius: 0;
+                    margin-bottom: 24px;
+                }
+
+
+            ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                color: var(--dark-blue);
+                opacity: 1; /* Firefox */
+              }
+              
+              :-ms-input-placeholder { /* Internet Explorer 10-11 */
+                color: var(--dark-blue);
+              }
+              
+              ::-ms-input-placeholder { /* Microsoft Edge */
+                color: var(--dark-blue);
+              }
+            }
         }
 
         #social{
             @include md{
                 grid-area: social;
+            }
+
+            ul{
+                display: flex;
+                justify-content: space-around;
+
+                @include lg{
+                    // justify-content: flex-end;
+                }
+
+                li{
+                    // margin-right: 20px;
+
+                    @include lg{
+                        // margin-right: 0;
+                        // margin-left: 20px;
+                    }
+                    a{
+                        color: var(--white);
+                        font-size: rem-calc(30);
+                    }
+                }
             }
         }
 

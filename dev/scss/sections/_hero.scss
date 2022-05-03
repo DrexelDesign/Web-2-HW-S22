@@ -1,69 +1,83 @@
 /* =============
     Hero
 ============= */
-#hero{
-   
+#hero {
 
-    #hero-img{
+
+    #hero-img {
         width: 100%;
     }
 
-    article{
+    article {
+        color: var(--white);
 
-        @include md{
+        @include md {
             display: grid;
             grid-template-columns: 50% auto;
         }
 
-        #hero-checklist{
+        button {
+            background-color: transparent;
+            border: none;
+            font-size: rem-calc(18);
+            font-weight: 700;
+            color: var(--white);
+        }
 
-            @include xxl{
+        #hero-checklist {
+            background-color: var(--orange);
+            padding: 16px;
+
+            @include xxl {
                 grid-template-columns: auto 720px 16px;
 
             }
         }
 
-        #hero-location{
-           
+        #hero-location {
+            background-color: var(--light-orange);
+            padding: 16px;
 
-            @include xxl{
+            @include xxl {
                 grid-template-columns: 16px 720px auto;
             }
         }
     }
 }
 
-
-#hero-sub-container{
-
+#hero-sub-container {
     display: grid;
-    gap: 24px;
 
-    @include md{
-        grid-template-columns: 50% auto;
+    @include md {
+        grid-template-columns: 16px auto 16px;
+        grid-template-areas: ". hero-sub .";
     }
 
-    @include xxl{
-        grid-template-columns: auto 720px 720px auto;
-        grid-template-areas: ". planning tickets .";
+    @include xl {
+        grid-template-columns: auto 1440px auto;
     }
 
-    #planning{
-        @include xxl{
-            grid-area: planning;
+    >div {
+        grid-area: hero-sub;
+        display: grid;
+        gap: 24px;
+
+        @include md{
+            grid-template-columns: 50% auto;
         }
-    }
 
-    #tickets{
-        @include xxl{
-            grid-area: tickets;
+        #planning {
+
         }
-    }
 
-    .hero-sub-content{
-        background-color: #ef8001;
+        #tickets {
+
+        }
+
+        .hero-sub-content {
+            background-color: var(--blue);
+            color: var(--white);
+            padding: 16px;
+        }
     }
 }
-
-
-

@@ -6,7 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/7ab68a398d.js" crossorigin="anonymous"></script>
-    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="css/styles.css">
     <title>Homework Spring 2022</title>
 </head>
@@ -14,7 +19,7 @@
 <body>
      <header class="global-css-grid">
          <div>
-             <section>
+             <section id="logo-container">
                  <img src="img/global/logo.svg" alt="Miramar Air Show">
                  <section class="show-for-md">
                      <h1>Miramar Air Show</h1>
@@ -23,7 +28,7 @@
              </section>
          </div>
      </header>
-     <section id="search" class="global-css-grid">
+     <section id="search" class="global-css-grid content-spacing-top">
               <div>
                   <form action="#">
                       <input type="text" placeholder="Search our show">
@@ -31,7 +36,7 @@
                   </form>
               </div>
           </section>
-     <section id="hero">
+     <section id="hero" class="content-spacing-top">
                    <img src="img/hero/hero.jpg" alt="large airplane hero image" id="hero-img">
                
                    <article>
@@ -56,36 +61,39 @@
                
                </section>
                
-               <section id="hero-sub-container">
-                   <section id="planning" class="hero-sub-content">
-                       <section>
-                           <h1>Planning your next show?</h1>
-                           <button>Start here</button>
+               <section id="hero-sub-container" class="content-spacing-top">
+                   <div>
+                       <section id="planning" class="hero-sub-content">
+                           <section>
+                               <h1>Planning your next show?</h1>
+                               <button class="orange-button">Start here</button>
+                           </section>
+                           <aside>
+                               <img src="img/hero/planning.jpg" alt="flying airplane">
+                           </aside>
                        </section>
-                       <aside>
-                           <img src="img/hero/planning.jpg" alt="flying airplane">
-                       </aside>
-                   </section>
-                   
-                   <section id="tickets" class="hero-sub-content">
-                       <section>
-                           <h1>Need tickets?</h1>
-                           <button>Order here</button>
+                       
+                       <section id="tickets" class="hero-sub-content">
+                           <section>
+                               <h1>Need tickets?</h1>
+                               <button class="orange-button">Order here</button>
+                           </section>
+                           <aside>
+                               <img src="img/hero/tickets.jpg" alt="flying airplane">
+                           </aside>
                        </section>
-                       <aside>
-                           <img src="img/hero/tickets.jpg" alt="flying airplane">
-                       </aside>
-                   </section>
+                   </div>
+                  
                </section>
                
-     <section id="gallery">
+     <section id="gallery" class="content-spacing-top">
                         <ul>
                             <li id="g1"><img src="img/gallery/gallery-1.jpg" alt="left side of rescue helicopter"></li>
                             <li id="g2"><img src="img/gallery/gallery-2.jpg" alt="bottom of rescue helicopter"></li>
                             <li id="g3" class="show-for-xl"><img src="img/gallery/gallery-3.jpg" alt="right side of rescue helicopter"></li>
                         </ul>
                     </section>
-     <section id="new">
+     <section id="new" class="content-spacing-top">
                              <section id="new-title" class="global-css-grid">
                                  <div>
                                      <h1>What’s New</h1>
@@ -101,7 +109,7 @@
                                              <p>Mike Wiskus is one of the most talented and experienced aerobatic pilots in the nation with over
                                                  25,000
                                                  flight hours in 40 different kind of</p>
-                                             <button>Read More</button>
+                                             <button class="orange-button">Read More</button>
                                          </section>
                                      </li>
                              
@@ -112,7 +120,7 @@
                                              <p>The U.S. Air Force Thunderbirds fly the F-16 Fighting Falcon and perform a combination of
                                                  formation and
                                                  solo maneuvers in an inspiring, patriotic</p>
-                                             <button>Read More</button>
+                                             <button class="orange-button">Read More</button>
                                          </section>
                                      </li>
                              
@@ -123,7 +131,7 @@
                                              <p>The Flight Line Club is the ultimate spot on the beach to experience the Air Show. Enjoy this VIP
                                                  beach
                                                  experience featuring tents for shade</p>
-                                             <button>Read More</button>
+                                             <button class="orange-button">Read More</button>
                                          </section>
                                      </li>
                              
@@ -134,7 +142,7 @@
                                              <p>The U.S. Air Force F-22 Raptor Demo Team will perform at the OC Air Show on June 19-20 over the
                                                  beach and
                                                  boardwalk of Ocean City,</p>
-                                             <button>Read More</button>
+                                             <button class="orange-button">Read More</button>
                                          </section>
                                      </li>
                              
@@ -145,7 +153,7 @@
                                              <p>Enjoy convenient amenities like restrooms, hand sanitizing stations, plus food and beverage
                                                  stands so you
                                              </p>
-                                             <button>Read More</button>
+                                             <button class="orange-button">Read More</button>
                                          </section>
                                      </li>
                                  </ul>
@@ -153,7 +161,7 @@
                          
                              
                          </section>
-     <footer class="global-css-grid">
+     <footer class="global-css-grid content-spacing-top">
                                   <div>
                                       <section id="locations">
                                           <h1>Locations</h1>
@@ -204,7 +212,7 @@
                                           <h1>Newsletter Sign Up Sign Up</h1>
                                           <form action="#">
                                               <input type="text" placeholder="Email Address">
-                                              <button>Sign Up</button>
+                                              <button class="orange-button">Sign Up</button>
                                           </form>
                                       </section>
                                   

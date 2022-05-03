@@ -2,8 +2,45 @@
     Header
 ============= */
 header{
+    background-color: var(--dark-blue);
+    padding: 24px 0 16px;
+    color: var(--light-blue);
     >div{
 
-        // border: 1px solid red;
+        #logo-container{
+
+            display: flex;
+
+
+
+            img{
+                width: 43px;
+                margin-right: 16px;
+            }
+
+            section{
+                h1{
+                    font-weight: 400;
+                    font-size: rem-calc(24);
+        
+                    @include lg{
+                        font-size: rem-calc(34);
+                    }
+                }
+        
+                h3{
+                    font-weight: 400;
+                    font-size: rem-calc(9);
+                    @include lg{
+                        font-size: rem-calc(13);
+                    }
+                    // margin-top: -10px;
+                }
+            }
+    
+           
+        }
+
+        
     }
 }

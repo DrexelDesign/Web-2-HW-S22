@@ -1,79 +1,103 @@
 /* =============
     New
 ============= */
-#new{
+#new {
 
-    #new-title{
+    #new-title {
+        h1 {
+            color: var(--grey);
+            font-size: rem-calc(20);
+            font-weight: 400;
+            margin-bottom: 16px;
 
+            @include lg {
+                font-size: rem-calc(37);
+                font-weight: 300;
+            }
+        }
     }
 
-    article{
+    article {
 
-        @include md{
+        @include md {
             display: grid;
             grid-template-columns: 16px auto 16px;
             grid-template-areas: ". new .";
         }
 
-        @include xxl{
+        @include xxl {
             grid-template-columns: auto 1440px auto;
         }
 
-        ul{
+        ul {
 
             display: grid;
             gap: 16px;
-    
-            @include md{
+
+            @include md {
                 grid-area: new;
                 grid-template-columns: repeat(4, 1fr);
-                grid-template-areas: 
-                "n1 n1 n2 n2"
-                "n3 n3 n4 n4"
-                ". n5 n5 .";
+                grid-template-areas:
+                    "n1 n1 n2 n2"
+                    "n3 n3 n4 n4"
+                    ". n5 n5 .";
             }
 
-            @include lg{
+            @include lg {
                 grid-template-columns: repeat(6, 1fr);
-                grid-template-areas: 
-                "n1 n1 n2 n2 n3 n3"
-                ". n4 n4 n5 n5 .";
+                grid-template-areas:
+                    "n1 n1 n2 n2 n3 n3"
+                    ". n4 n4 n5 n5 .";
             }
-    
-            #n1{
-                @include md{
+
+
+            li {
+                img {
+                    width: 100%;
+                }
+
+                section{
+                    background-color: var(--light-blue);
+                    padding: 16px;
+
+                    h2{
+                        font-size: rem-calc(27);
+                        font-weight: 600
+                    }
+
+                    p{
+                        margin: 8px 0 16px;
+                    }
+                }
+            }
+
+            #n1 {
+                @include md {
                     grid-area: n1;
                 }
             }
-    
-            #n2{
-                @include md{
+
+            #n2 {
+                @include md {
                     grid-area: n2;
                 }
             }
-    
-            #n3{
-                @include md{
+
+            #n3 {
+                @include md {
                     grid-area: n3;
                 }
             }
-    
-            #n4{
-                @include md{
+
+            #n4 {
+                @include md {
                     grid-area: n4;
                 }
             }
-    
-            #n5{
-                @include md{
+
+            #n5 {
+                @include md {
                     grid-area: n5;
-                }
-            }
-    
-    
-            li{
-                img{
-                    width: 100%;
                 }
             }
         }
