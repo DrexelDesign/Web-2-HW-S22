@@ -52,12 +52,19 @@
 
 
             li {
-                img {
-                    width: 100%;
+                background-color: var(--light-blue);
+                aside {
+                   height: 200px;
+                   background-size: cover;
+                   background-position: center;
+
+                   @include xl{
+                       height: 300px;
+                   }
                 }
 
                 section{
-                    background-color: var(--light-blue);
+                 
                     padding: 16px;
 
                     h2{
@@ -72,8 +79,12 @@
             }
 
             #n1 {
+
                 @include md {
                     grid-area: n1;
+                }
+                aside{
+                    background-image: url('../img/new/new-1.jpg');
                 }
             }
 
@@ -81,11 +92,17 @@
                 @include md {
                     grid-area: n2;
                 }
+                aside{
+                    background-image: url('../img/new/new-2.jpg');
+                }
             }
 
             #n3 {
                 @include md {
                     grid-area: n3;
+                }
+                aside{
+                    background-image: url('../img/new/new-3.jpg');
                 }
             }
 
@@ -93,11 +110,21 @@
                 @include md {
                     grid-area: n4;
                 }
+                aside{
+                    background-image: url('../img/new/new-4.jpg');
+
+                    @include xl{
+                        background-position: center top;
+                    }
+                }
             }
 
             #n5 {
                 @include md {
                     grid-area: n5;
+                }
+                aside{
+                    background-image: url('../img/new/new-5.jpg');
                 }
             }
         }

@@ -3,9 +3,22 @@
 ============= */
 #hero {
 
-
     #hero-img {
-        width: 100%;
+        width: 100vw;
+        height: 50vh;
+        background-image: url('../img/hero/hero.jpg');
+        background-size: cover;
+        // x: left | center | right
+        // y: top | center | bottom
+        background-position: center;
+
+        // @include md{
+        //     height: 20vh;
+        // }
+
+        @include lg{
+            height: 70vh;
+        }
     }
 
     article {
@@ -75,17 +88,35 @@
         }
 
         #planning {
-
+            aside{
+                background-image: url('../img/hero/planning.jpg');
+                background-position: 16% 40%;
+            }
         }
 
         #tickets {
-
+            aside{
+                background-image: url('../img/hero/tickets.jpg');
+                background-position: 53% 68%;
+            }
         }
 
         .hero-sub-content {
             background-color: var(--blue);
             color: var(--white);
             padding: 16px;
+
+            aside{
+                width: 85px;
+                height: 85px;
+                border-radius: 100%;
+                border: 4px solid var(--white);
+
+                @include md{
+                    width: 113px;
+                    height: 113px;
+                }
+            }
         }
     }
 }
