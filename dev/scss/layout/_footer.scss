@@ -29,7 +29,7 @@ footer{
 
             grid-template-areas: 
             "locations newsletter"
-            ". social";
+            "locations social";
         }
 
         @include lg{
@@ -45,7 +45,7 @@ footer{
         }
 
         #locations{
-
+            padding-top: 24px;
             @include md{
                 grid-area: locations;
             }
@@ -62,21 +62,33 @@ footer{
                         margin-bottom: 16px;
                     }
 
-                    address{
-                        color: var(--aqua-blue);
-                        font-size: rem-calc(12);
-                        font-style: normal;
-                    }
+                    
 
                     section{
-                        display: grid;
-                        grid-template-columns: 10% auto;
+                        // display: grid;
+                        // grid-template-columns: 10% auto;
+                        display: flex;
+                        align-items: center;
+                        margin-top: 16px;
+
+                        address{
+                            color: var(--aqua-blue);
+                            font-size: rem-calc(12);
+                            font-style: normal;
+                           
+                        }
+
+                        img{
+                            margin-right: 24px;
+                       
+                        }
                     }
                 }
             }
         }
 
         #newsletter{
+            padding-top: 24px;
             @include md{
                 grid-area: newsletter;
             }
@@ -90,6 +102,10 @@ footer{
                     padding: 16px 8px;
                     border-radius: 0;
                     margin-bottom: 24px;
+                }
+
+                section{
+                    text-align: right;
                 }
 
 
@@ -109,24 +125,32 @@ footer{
         }
 
         #social{
+            padding-top: 24px;
+
             @include md{
                 grid-area: social;
+                padding-top: 0;
+                margin-top: -100px;
+            }
+
+            @include lg{
+                margin: 0;
+                text-align: right;
             }
 
             ul{
                 display: flex;
-                justify-content: space-around;
 
                 @include lg{
-                    // justify-content: flex-end;
+                    justify-content: flex-end;
                 }
-
+            
                 li{
-                    // margin-right: 20px;
+                    margin-right: 16px;
 
                     @include lg{
-                        // margin-right: 0;
-                        // margin-left: 20px;
+                        margin-right: 0;
+                        margin-left: 16px;
                     }
                     a{
                         color: var(--white);

@@ -28,13 +28,30 @@
             display: grid;
             grid-template-columns: 50% auto;
         }
+        .hero-info-cards{
+            
+            display: flex;
+            align-items: center;
 
-        button {
-            background-color: transparent;
-            border: none;
-            font-size: rem-calc(18);
-            font-weight: 700;
-            color: var(--white);
+            button {
+                background-color: transparent;
+                border: none;
+                font-size: rem-calc(18);
+                font-weight: 700;
+                color: var(--white);
+                margin-left: auto;
+                @include lg{
+                    display: flex;
+                    align-items: center;
+                }
+
+                img{
+                    @include md{
+                        margin-left: 8px;
+                    }
+                }
+            }
+           
         }
 
         #hero-checklist {
@@ -105,6 +122,22 @@
             background-color: var(--blue);
             color: var(--white);
             padding: 16px;
+
+            display: flex;
+            align-items: center;
+
+            .circle-container{
+                margin-left: auto;
+            }
+
+            h1{
+                font-weight: 400;
+            }
+
+            button{
+                margin-top: 16px;
+            }
+
 
             aside{
                 width: 85px;
