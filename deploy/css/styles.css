@@ -442,6 +442,11 @@ button {
   border: none;
   color: var(--white);
   padding: 6px 14px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.orange-button:hover {
+  background-color: var(--orange);
 }
 
 /* =============
@@ -482,6 +487,11 @@ textarea {
 /* =============
     Navigation
 ============= */
+a:link, a:visited {
+  text-decoration: none;
+  transition: 0.25;
+}
+
 /* =============
     Header
 ============= */
@@ -590,6 +600,14 @@ footer > div #locations ul li section address {
 footer > div #locations ul li section img {
   margin-right: 24px;
 }
+footer > div #locations ul li section a:link, footer > div #locations ul li section a:visited {
+  color: var(--aqua-blue);
+  transition: 0.25s;
+  text-decoration: none;
+}
+footer > div #locations ul li section a:link:hover, footer > div #locations ul li section a:link:active, footer > div #locations ul li section a:visited:hover, footer > div #locations ul li section a:visited:active {
+  color: var(--white);
+}
 footer > div #newsletter {
   padding-top: 24px;
 }
@@ -657,9 +675,13 @@ footer > div #social ul li {
     margin-left: 16px;
   }
 }
-footer > div #social ul li a {
+footer > div #social ul li a:link, footer > div #social ul li a:visited {
   color: var(--white);
   font-size: 1.875rem;
+  transition: 0.25s;
+}
+footer > div #social ul li a:link:hover, footer > div #social ul li a:link:active, footer > div #social ul li a:visited:hover, footer > div #social ul li a:visited:active {
+  color: var(--aqua-blue);
 }
 
 /* =============
@@ -686,26 +708,32 @@ footer > div #social ul li a {
     grid-template-columns: 50% auto;
   }
 }
-#hero article .hero-info-cards {
+@media (min-width: 1440px) {
+  #hero article .hero-info-cards {
+    display: grid;
+  }
+}
+#hero article .hero-info-cards > div {
   display: flex;
   align-items: center;
 }
-#hero article .hero-info-cards button {
+#hero article .hero-info-cards > div button {
   background-color: transparent;
   border: none;
   font-size: 1.125rem;
   font-weight: 700;
   color: var(--white);
   margin-left: auto;
+  cursor: pointer;
 }
 @media (min-width: 1024px) {
-  #hero article .hero-info-cards button {
+  #hero article .hero-info-cards > div button {
     display: flex;
     align-items: center;
   }
 }
 @media (min-width: 768px) {
-  #hero article .hero-info-cards button img {
+  #hero article .hero-info-cards > div button img {
     margin-left: 8px;
   }
 }
@@ -716,6 +744,12 @@ footer > div #social ul li a {
 @media (min-width: 1440px) {
   #hero article #hero-checklist {
     grid-template-columns: auto 720px 16px;
+    grid-template-areas: ". check .";
+  }
+}
+@media (min-width: 1440px) {
+  #hero article #hero-checklist > div {
+    grid-area: check;
   }
 }
 #hero article #hero-location {
@@ -725,6 +759,12 @@ footer > div #social ul li a {
 @media (min-width: 1440px) {
   #hero article #hero-location {
     grid-template-columns: 16px 720px auto;
+    grid-template-areas: ". location .";
+  }
+}
+@media (min-width: 1440px) {
+  #hero article #hero-location > div {
+    grid-area: location;
   }
 }
 #hero article #hero-location p span {
@@ -1002,9 +1042,14 @@ footer > div #social ul li a {
   padding: 6px 10px 4px;
   margin: 0;
   border: none;
+  cursor: pointer;
+  transition: 0.25s;
 }
 @media (min-width: 768px) {
   #search > div form button {
     padding: 9px 16px 6px;
   }
+}
+#search > div form button:hover {
+  background-color: var(--orange);
 }

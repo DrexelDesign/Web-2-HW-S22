@@ -65,8 +65,6 @@ footer{
                     
 
                     section{
-                        // display: grid;
-                        // grid-template-columns: 10% auto;
                         display: flex;
                         align-items: center;
                         margin-top: 16px;
@@ -81,6 +79,18 @@ footer{
                         img{
                             margin-right: 24px;
                        
+                        }
+
+                        a:link, a:visited{
+                            color: var(--aqua-blue);
+                            transition: 0.25s;
+                            text-decoration: none;
+
+
+                            &:hover, &:active{
+                                color: var(--white);
+                            }
+
                         }
                     }
                 }
@@ -152,9 +162,14 @@ footer{
                         margin-right: 0;
                         margin-left: 16px;
                     }
-                    a{
+                    a:link, a:visited{
                         color: var(--white);
                         font-size: rem-calc(30);
+                        transition: 0.25s;
+
+                        &:hover, &:active{
+                            color: var(--aqua-blue);
+                        }
                     }
                 }
             }

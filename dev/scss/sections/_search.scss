@@ -27,9 +27,15 @@
                 padding: 6px 10px 4px;
                 margin: 0;
                 border: none;
+                cursor: pointer;
+                transition: 0.25s;
 
                 @include md{
                     padding: 9px 16px 6px;
+                }
+
+                &:hover{
+                    background-color: var(--orange);
                 }
             }
         }

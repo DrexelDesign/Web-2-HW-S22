@@ -30,27 +30,38 @@
         }
         .hero-info-cards{
             
-            display: flex;
-            align-items: center;
+            @include xxl{
+                display: grid;
+            }
 
-            button {
-                background-color: transparent;
-                border: none;
-                font-size: rem-calc(18);
-                font-weight: 700;
-                color: var(--white);
-                margin-left: auto;
-                @include lg{
-                    display: flex;
-                    align-items: center;
-                }
-
-                img{
-                    @include md{
-                        margin-left: 8px;
+            >div{
+                display: flex;
+                align-items: center;
+                button {
+                    background-color: transparent;
+                    border: none;
+                    font-size: rem-calc(18);
+                    font-weight: 700;
+                    color: var(--white);
+                    margin-left: auto;
+                    cursor: pointer;
+                    
+                    @include lg{
+                        display: flex;
+                        align-items: center;
+                    }
+    
+    
+    
+                    img{
+                        @include md{
+                            margin-left: 8px;
+                        }
                     }
                 }
             }
+
+            
            
         }
 
@@ -60,7 +71,13 @@
 
             @include xxl {
                 grid-template-columns: auto 720px 16px;
+                grid-template-areas: ". check .";
+            }
 
+            >div{
+                @include xxl{
+                    grid-area: check;
+                }
             }
         }
 
@@ -70,6 +87,13 @@
 
             @include xxl {
                 grid-template-columns: 16px 720px auto;
+                grid-template-areas: ". location .";
+            }
+
+            >div{
+                @include xxl{
+                    grid-area: location;
+                }
             }
 
             p{

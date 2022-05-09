@@ -11,4 +11,10 @@ button{
     border: none;
     color: var(--white);
     padding: 6px 14px;
+    transition: 0.25s;
+    cursor: pointer;
+
+    &:hover{
+        background-color: var(--orange);
+    }
 }
