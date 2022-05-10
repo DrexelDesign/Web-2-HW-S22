@@ -7,7 +7,7 @@
       "uuidString" : "A08D0F6C-A386-4704-B178-058EB0CF90DC"
     }
   ],
-  "creatorBuild" : "34359",
+  "creatorBuild" : "34365",
   "files" : {
     "\/assets\/afcb9e44a0cddd15f3776470fcf74f1f.jpg" : {
       "ft" : 16384,
@@ -393,7 +393,7 @@
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
-      "oA" : 1,
+      "oA" : 0,
       "oAP" : "\/dev\/content\/gallery.html",
       "oF" : 0
     },
@@ -401,7 +401,7 @@
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
-      "oA" : 1,
+      "oA" : 0,
       "oAP" : "\/dev\/content\/hero.html",
       "oF" : 0
     },
@@ -409,7 +409,7 @@
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
-      "oA" : 1,
+      "oA" : 0,
       "oAP" : "\/dev\/content\/new.html",
       "oF" : 0
     },
@@ -417,7 +417,7 @@
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
-      "oA" : 1,
+      "oA" : 0,
       "oAP" : "\/dev\/content\/search.html",
       "oF" : 0
     },
@@ -443,6 +443,14 @@
       "hM" : 0,
       "oA" : 1,
       "oAP" : "\/dev\/global\/header.html",
+      "oF" : 0
+    },
+    "\/dev\/global\/nav.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/global\/nav.html",
       "oF" : 0
     },
     "\/dev\/global\/scripts.kit" : {
@@ -723,7 +731,7 @@
   "projectAttributes" : {
     "creationDate" : 672237272.78827202,
     "displayValue" : "Web-2-Students-HW-S22",
-    "displayValueWasSetByUser" : 1,
+    "displayValueWasSetByUser" : 0,
     "iconImageName" : "brackets-tar",
     "iconImageWasSetByUser" : 0
   },

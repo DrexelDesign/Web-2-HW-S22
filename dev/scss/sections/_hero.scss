@@ -115,7 +115,7 @@
         grid-template-areas: ". hero-sub .";
     }
 
-    @include xl {
+    @include xxl {
         grid-template-columns: auto 1440px auto;
     }
 

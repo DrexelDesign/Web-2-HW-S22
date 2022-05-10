@@ -364,6 +364,10 @@ template {
 /* =============
     Base
 ============= */
+html {
+  scroll-behavior: smooth;
+}
+
 ul {
   padding: 0;
   margin: 0;
@@ -388,6 +392,10 @@ ul li {
 
 .content-spacing-top {
   margin-top: 24px;
+}
+
+.show-menu {
+  display: block !important;
 }
 
 .show-for-md {
@@ -435,6 +443,7 @@ h1, h2, h3, h4, h5, p {
 button {
   margin: 0;
   padding: 0;
+  cursor: pointer;
 }
 
 .orange-button {
@@ -492,13 +501,100 @@ a:link, a:visited {
   transition: 0.25;
 }
 
+nav {
+  display: none;
+  background-color: var(--blue);
+  height: 100vh;
+  padding: 16px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  box-sizing: border-box;
+}
+@media (min-width: 1024px) {
+  nav {
+    background-color: var(--dark-blue);
+    display: block;
+    height: 100%;
+    padding: 0;
+    position: relative;
+    width: 100%;
+  }
+}
+nav aside {
+  display: flex;
+  justify-content: flex-end;
+}
+@media (min-width: 1024px) {
+  nav aside {
+    display: none;
+  }
+}
+nav aside button {
+  background-color: transparent;
+  border: none;
+  color: var(--orange);
+}
+nav section {
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+}
+@media (min-width: 1024px) {
+  nav section {
+    display: block;
+    margin-top: 0;
+    height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  nav section ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  nav section ul li {
+    margin-left: 16px;
+  }
+}
+nav section ul li a:link, nav section ul li a:visited {
+  text-decoration: none;
+  transition: 0.25s;
+  color: var(--light-blue);
+  padding: 16px;
+  display: inline-block;
+  font-size: 1.875rem;
+}
+nav section ul li a:link:hover, nav section ul li a:link:active, nav section ul li a:visited:hover, nav section ul li a:visited:active {
+  color: var(--blue);
+}
+@media (min-width: 1024px) {
+  nav section ul li a:link, nav section ul li a:visited {
+    font-size: 1.375rem;
+    padding: 0;
+    font-weight: 300;
+  }
+}
+
 /* =============
     Header
 ============= */
 header {
   background-color: var(--dark-blue);
   padding: 24px 0 16px;
+  position: fixed;
+  left: 0;
+  top: 0;
   color: var(--light-blue);
+  width: 100%;
+}
+header > div {
+  display: grid;
+  grid-template-columns: 50% auto;
 }
 header > div #logo-container {
   display: flex;
@@ -524,6 +620,22 @@ header > div #logo-container section h3 {
   header > div #logo-container section h3 {
     font-size: 0.8125rem;
   }
+}
+header > div #burger-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  header > div #burger-container {
+    display: none;
+  }
+}
+header > div #burger-container button {
+  border: none;
+  background-color: transparent;
+  color: var(--white);
+  padding: 16px;
 }
 
 /* =============
@@ -780,7 +892,7 @@ footer > div #social ul li a:link:hover, footer > div #social ul li a:link:activ
     grid-template-areas: ". hero-sub .";
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   #hero-sub-container {
     grid-template-columns: auto 1440px auto;
   }
@@ -1020,6 +1132,15 @@ footer > div #social ul li a:link:hover, footer > div #social ul li a:link:activ
 /* =============
     Search
 ============= */
+#search {
+  margin-top: 90px;
+  padding-top: 16px;
+}
+@media (min-width: 1024px) {
+  #search {
+    padding-top: 24px;
+  }
+}
 #search > div form {
   display: flex;
 }
