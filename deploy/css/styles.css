@@ -352,16 +352,38 @@ template {
 /* =============
     Base
 ============= */
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+
+.show-for-md {
+  display: none;
+}
+@media (min-width: 768px) {
+  .show-for-md {
+    display: block;
+  }
+}
+
+.hide-for-md {
+  display: block;
+}
+@media (min-width: 768px) {
+  .hide-for-md {
+    display: none;
+  }
+}
+
 /* =============
     Typography
 ============= */
 /* =============
     Buttons
 ============= */
-button {
-  border: none;
-}
-
 /* =============
     Forms
 ============= */
@@ -386,11 +408,62 @@ textarea {
 /* =============
     Header
 ============= */
-header {
-  color: red;
-  font-size: 0.75rem;
-}
-
 /* =============
     Footer
 ============= */
+@media (min-width: 768px) {
+  main {
+    display: grid;
+    grid-template-columns: auto 80vw auto;
+    grid-template-areas: ". main .";
+  }
+}
+@media (min-width: 1200px) {
+  main {
+    grid-template-columns: auto 1200px auto;
+  }
+}
+main > div {
+  height: 50vh;
+}
+@media (min-width: 768px) {
+  main > div {
+    grid-area: main;
+  }
+}
+main > div #golbal-grid {
+  border: 1px solid red;
+  height: 100%;
+}
+main > div #golbal-grid #top {
+  display: flex;
+  background-color: aqua;
+  padding: 20px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+main > div #golbal-grid #top aside {
+  margin-left: auto;
+}
+main > div #golbal-grid #top aside ul {
+  display: flex;
+}
+main > div #golbal-grid #top aside ul li {
+  margin-right: 20px;
+}
+main > div #golbal-grid #bottom {
+  height: 100%;
+}
+@media (min-width: 768px) {
+  main > div #golbal-grid #bottom {
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+  }
+}
+main > div #golbal-grid #bottom aside {
+  background-color: purple;
+}
+main > div #golbal-grid #bottom section {
+  background-color: orange;
+  height: 100%;
+}

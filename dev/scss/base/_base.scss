@@ -1,5 +1,28 @@
 /* =============
     Base
 ============= */
+ul{
+    margin: 0;
+    padding: 0;
+    li{
+        list-style: none;
+    }
+}
+
+.show-for-md {
+    display: none;
+  
+    @include md {
+        display: block;
+    }
+}
+
+.hide-for-md {
+    display: block;
+
+    @include md {
+        display: none;
+    }
+}
 
 

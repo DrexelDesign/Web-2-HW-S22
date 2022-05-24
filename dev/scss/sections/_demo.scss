@@ -1,0 +1,69 @@
+
+main {
+    
+
+    @include md{
+        display: grid;
+        grid-template-columns: auto 80vw auto;
+        grid-template-areas: ". main .";
+    }
+
+    @include xl{
+        grid-template-columns: auto 1200px auto;
+    }
+
+
+    > div {
+      
+
+      @include md{
+        grid-area: main;
+      }
+  
+      height: 50vh;
+  
+      #golbal-grid {
+        border: 1px solid red;
+        height: 100%;
+  
+        #top {
+          display: flex;
+          background-color: aqua;
+          padding: 20px 0;
+          width: 100%;
+          box-sizing: border-box;
+          section {
+          }
+          aside {
+            margin-left: auto;
+  
+            ul {
+              display: flex;
+              li {
+                margin-right: 20px;
+              }
+            }
+          }
+        }
+  
+        #bottom {
+          height: 100%;
+        //   background-color: orange;
+  
+          @include md {
+            display: grid;
+            grid-template-columns: 10% auto 10%;
+          }
+
+          aside{
+            background-color: purple;
+          }
+          section{
+            background-color: orange;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+  
